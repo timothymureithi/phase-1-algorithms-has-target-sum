@@ -1,5 +1,15 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+
+  const num = {};
+  for (const number of array){
+    const cmpt = target - number;
+    if (num[cmpt]) return true;
+
+    num[number] = true;
+  }
+  return false;
+
 }
 
 /* 
